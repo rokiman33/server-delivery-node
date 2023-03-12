@@ -37,7 +37,7 @@ const mercadoPagoRoutes = require('./routes/mercadoPagoRoutes');
 
 
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8081;
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -72,7 +72,7 @@ products(app, upload);
  */
 ordersDeliverySocket(io);
 
-server.listen(3000, '192.168.100.33' || 'localhost', function() {
+server.listen(8081, '127.0.0.1' || 'localhost', function() {
     console.log('Aplicacion de NodeJS ' + port + ' Iniciada...')
 });
 
